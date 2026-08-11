@@ -1,8 +1,24 @@
-# End-to-End NLP Pipeline
+# Emotion Recognition: From Classical NLP to Transformers and RAG
 
-An end-to-end Natural Language Processing project built in Python using the Hugging Face `dair-ai/emotion` dataset as the main dataset.
+An end-to-end Natural Language Processing project for **emotion recognition and text understanding**, built in Python using the Hugging Face `dair-ai/emotion` dataset.
 
-The project covers classical NLP, linguistic analysis, statistical language modelling, sequence labelling, topic modelling, word embeddings, Transformer fine-tuning, Retrieval-Augmented Generation (RAG), and final model evaluation.
+The project progresses from fundamental NLP techniques and classical machine learning to linguistic analysis, statistical language modelling, sequence labelling, topic modelling, word embeddings, Transformer fine-tuning, Retrieval-Augmented Generation (RAG), and final model evaluation.
+
+## Project Overview
+
+The central task is **emotion classification** across six classes: sadness, joy, love, anger, fear, and surprise.
+
+### Best Result
+
+**DistilBERT achieved the best overall emotion-classification performance:**
+
+| Metric | Score |
+|---|---:|
+| Accuracy | **92.00%** |
+| Macro-F1 | **88.62%** |
+| Weighted F1 | **92.24%** |
+
+The strongest classical baseline was **Linear SVM**, with **90.45% accuracy** and **85.89% Macro-F1**.
 
 ## Main Dataset
 
@@ -64,6 +80,7 @@ nlp-pipeline/
 ├── README.md
 │
 ├── src/
+│   ├── __init__.py
 │   ├── data_loader.py
 │   ├── preprocessing.py
 │   ├── tokenization.py
