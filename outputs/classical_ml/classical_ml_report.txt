@@ -1,0 +1,28 @@
+CLASSICAL MACHINE LEARNING REPORT
+============================================================
+
+Features: TF-IDF
+Models:
+1. Multinomial Naive Bayes from scratch
+2. Logistic Regression
+3. Linear SVM
+
+Naive Bayes From Scratch
+Accuracy: 0.7820
+Macro Precision: 0.8907
+Macro Recall: 0.5675
+Macro F1: 0.6082
+
+Logistic Regression
+Accuracy: 0.8880
+Macro Precision: 0.8935
+Macro Recall: 0.7934
+Macro F1: 0.8302
+
+Linear SVM
+Accuracy: 0.9045
+Macro Precision: 0.8664
+Macro Recall: 0.8523
+Macro F1: 0.8589
+
+Best model: Linear SVM

@@ -1,0 +1,70 @@
+{
+    "classification": [
+        {
+            "model": "Naive Bayes From Scratch",
+            "accuracy": 0.782,
+            "macro_precision": 0.8907323787554969,
+            "macro_recall": 0.5675225656471424,
+            "macro_f1": 0.6081538612732923
+        },
+        {
+            "model": "Logistic Regression",
+            "accuracy": 0.888,
+            "macro_precision": 0.8934507946332407,
+            "macro_recall": 0.7933888104249581,
+            "macro_f1": 0.8302295269531351
+        },
+        {
+            "model": "Linear SVM",
+            "accuracy": 0.9045,
+            "macro_precision": 0.8663766824281421,
+            "macro_recall": 0.8522667366176436,
+            "macro_f1": 0.8588975919873092
+        },
+        {
+            "model": "GloVe + Logistic Regression",
+            "accuracy": 0.409,
+            "macro_precision": null,
+            "macro_recall": null,
+            "macro_f1": 0.3684
+        },
+        {
+            "model": "DistilBERT",
+            "accuracy": 0.92,
+            "macro_precision": 0.8622084383597128,
+            "macro_recall": 0.9252549310076477,
+            "macro_f1": 0.8861815757711464
+        }
+    ],
+    "best_classifier": {
+        "model": "DistilBERT",
+        "accuracy": 0.92,
+        "macro_precision": 0.8622084383597128,
+        "macro_recall": 0.9252549310076477,
+        "macro_f1": 0.8861815757711464
+    },
+    "language_model": {
+        "unigram_laplace": 548.5972,
+        "unigram_backoff": 548.5972,
+        "bigram_laplace": 1191.4282,
+        "bigram_backoff": 216.9287,
+        "trigram_laplace": 3001.2767,
+        "trigram_backoff": 196.7952
+    },
+    "sequence_labeling": {
+        "hmm_pos_accuracy": 0.859,
+        "strict_entity_f1": 0.7871,
+        "token_macro_f1": 0.7231
+    },
+    "topic_modeling": {
+        "LSA": 0.0871,
+        "LDA": 0.0538,
+        "BERTopic": 0.1502
+    },
+    "rag": {
+        "good_query_confident": true,
+        "good_answer": "combines information retrieval with text generation",
+        "failed_query_confident": false,
+        "failed_answer": "I do not have enough information."
+    }
+}

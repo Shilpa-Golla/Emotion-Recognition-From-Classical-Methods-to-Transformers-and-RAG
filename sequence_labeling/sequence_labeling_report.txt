@@ -1,0 +1,40 @@
+SEQUENCE LABELLING REPORT
+============================================================
+
+HMM + VITERBI POS TAGGING
+Implemented from scratch
+POS Accuracy: 0.8590
+
+CRF NAMED ENTITY RECOGNITION
+Token Weighted F1: 0.7993
+Token Macro-F1: 0.7231
+Strict Entity-Level F1: 0.7871
+
+STRICT ENTITY-LEVEL REPORT
+              precision    recall  f1-score   support
+
+         LOC     0.9004    0.8160    0.8561       288
+        MISC     0.6835    0.8308    0.7500        65
+         ORG     0.6341    0.4149    0.5016       188
+         PER     0.8507    0.8507    0.8507       442
+
+   micro avg     0.8210    0.7558    0.7871       983
+   macro avg     0.7672    0.7281    0.7396       983
+weighted avg     0.8128    0.7558    0.7789       983
+
+
+CRF FEATURES
+- Current word
+- Lowercase word
+- Last 2 characters
+- Last 3 characters
+- Is uppercase?
+- Is title case?
+- Is digit?
+- Word length
+- Previous word
+- Previous word case
+- Next word
+- Next word case
+- Beginning of sentence
+- End of sentence

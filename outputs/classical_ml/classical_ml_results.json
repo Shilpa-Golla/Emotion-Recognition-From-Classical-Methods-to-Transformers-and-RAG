@@ -1,0 +1,20 @@
+{
+    "Naive Bayes From Scratch": {
+        "accuracy": 0.782,
+        "macro_precision": 0.8907323787554969,
+        "macro_recall": 0.5675225656471424,
+        "macro_f1": 0.6081538612732923
+    },
+    "Logistic Regression": {
+        "accuracy": 0.888,
+        "macro_precision": 0.8934507946332407,
+        "macro_recall": 0.7933888104249581,
+        "macro_f1": 0.8302295269531351
+    },
+    "Linear SVM": {
+        "accuracy": 0.9045,
+        "macro_precision": 0.8663766824281421,
+        "macro_recall": 0.8522667366176436,
+        "macro_f1": 0.8588975919873092
+    }
+}

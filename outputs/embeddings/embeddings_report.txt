@@ -1,0 +1,48 @@
+WORD EMBEDDINGS REPORT
+======================================================================
+
+1. WORD2VEC SKIP-GRAM WITH NEGATIVE SAMPLING
+Implemented from scratch using PyTorch embeddings.
+Embedding dimension: 50
+Window size: 2
+Negative samples: 5
+
+Scratch nearest words to happy:
+inspired: 0.5286
+job: 0.5213
+flawless: 0.5065
+draw: 0.5054
+educating: 0.4998
+
+2. GLOVE ANALOGY
+king - man + woman:
+queen: 0.8524
+throne: 0.7664
+prince: 0.7592
+daughter: 0.7474
+elizabeth: 0.7460
+
+3. FASTTEXT OOV
+OOV word: happytastic
+FastText generated a vector using subword information.
+
+4. CONTEXTUAL BERT
+Word: bank
+Sentence 1: I deposited money in the bank.
+Sentence 2: I sat beside the river bank.
+Cosine similarity between contextual vectors: 0.5118
+
+5. EMBEDDINGS + CLASSIFIER
+accuracy: 0.4090
+macro_precision: 0.3862
+macro_recall: 0.4378
+macro_f1: 0.3684
+
+6. EMBEDDING COMPARISON
+Model                 Vector        Context?    OOV?        Model Type
+Scratch Word2Vec      Static        No          No          Skip-Gram
+Gensim CBOW           Static        No          No          Predict center word
+Gensim Skip-Gram      Static        No          No          Predict context words
+GloVe                 Static        No          No          Global co-occurrence
+FastText              Static        No          Yes         Subword
+BERT                  Contextual    Yes         Subword     Transformer

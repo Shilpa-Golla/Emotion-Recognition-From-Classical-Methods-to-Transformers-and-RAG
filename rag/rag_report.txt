@@ -1,0 +1,46 @@
+RETRIEVAL-AUGMENTED GENERATION REPORT
+======================================================================
+
+ARCHITECTURE
+----------------------------------------
+Sparse retrieval: TF-IDF
+Dense retrieval: SentenceTransformer
+Hybrid score: weighted combination of sparse and dense retrieval
+Generator: google/flan-t5-small
+
+Confidence rule:
+If BOTH sparse and dense retrieval scores are below their thresholds, generation is skipped.
+
+
+GOOD RAG QUERY
+----------------------------------------
+Question: What is Retrieval-Augmented Generation and how does it work?
+Retrieval confident: True
+Decision: generated_from_retrieved_context
+Answer: combines information retrieval with text generation
+
+Retrieved documents:
+- RAG | sparse=0.7002 | dense=0.7514 | hybrid=1.0000
+- BM25 | sparse=0.0000 | dense=0.3516 | hybrid=0.2586
+- TF-IDF | sparse=0.0000 | dense=0.2756 | hybrid=0.2127
+
+
+OUT-OF-KNOWLEDGE QUERY
+----------------------------------------
+Question: Who won the FIFA World Cup in 2022?
+Retrieval confident: False
+Decision: abstained_due_to_low_retrieval_confidence
+Answer: I do not have enough information.
+
+Explanation:
+The secondary knowledge base contains no information about the 2022 FIFA World Cup. Both sparse and dense retrieval confidence were below the required thresholds, so generation was blocked to reduce hallucination.
+
+Retrieved documents:
+- RAG | sparse=0.0000 | dense=0.1307 | hybrid=0.5000
+- Germany | sparse=0.0000 | dense=0.1268 | hybrid=0.4829
+- Berlin | sparse=0.0000 | dense=0.1004 | hybrid=0.3679
+
+
+CONCLUSION
+----------------------------------------
+The successful query demonstrates grounded retrieval-augmented generation. The out-of-knowledge query demonstrates an important RAG failure mode: irrelevant documents may still receive non-zero similarity scores. A retrieval confidence gate was therefore added to prevent unsupported generation.

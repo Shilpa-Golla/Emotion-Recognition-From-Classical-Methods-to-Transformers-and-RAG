@@ -1,0 +1,75 @@
+FINAL NLP PIPELINE EVALUATION REPORT
+==========================================================================================
+
+CLASSIFICATION COMPARISON
+------------------------------------------------------------------------------------------
+Model                           Accuracy      Precision     Recall        Macro-F1      
+Naive Bayes From Scratch        0.782         0.89073237875549690.56752256564714240.6081538612732923
+Logistic Regression             0.888         0.89345079463324070.79338881042495810.8302295269531351
+Linear SVM                      0.9045        0.86637668242814210.85226673661764360.8588975919873092
+GloVe + Logistic Regression     0.409         None          None          0.3684        
+DistilBERT                      0.92          0.86220843835971280.92525493100764770.8861815757711464
+
+Best classifier: DistilBERT
+Best Macro-F1: 0.8862
+
+
+LANGUAGE MODEL
+--------------------------------------------------
+unigram_laplace: 548.5972
+unigram_backoff: 548.5972
+bigram_laplace: 1191.4282
+bigram_backoff: 216.9287
+trigram_laplace: 3001.2767
+trigram_backoff: 196.7952
+
+SEQUENCE LABELLING
+--------------------------------------------------
+hmm_pos_accuracy: 0.8590
+strict_entity_f1: 0.7871
+token_macro_f1: 0.7231
+
+TOPIC MODELLING
+--------------------------------------------------
+LSA: 0.0871
+LDA: 0.0538
+BERTopic: 0.1502
+
+RAG
+--------------------------------------------------
+Good query confident: True
+Good answer: combines information retrieval with text generation
+Out-of-knowledge confident: False
+Out-of-knowledge answer: I do not have enough information.
+
+
+FINAL ANALYSIS
+======================================================================
+
+1. Emotion Classification
+The best emotion classification model was DistilBERT with Macro-F1 0.8862 and accuracy 0.9200.
+DistilBERT improved Macro-F1 over Linear SVM by +0.0273.
+However, Linear SVM required far less training compute, while DistilBERT provided stronger contextual representations and better minority-class recall.
+
+2. Static Embeddings
+Average GloVe embeddings with Logistic Regression achieved Macro-F1 0.3684. This was weaker than TF-IDF models because averaging static word vectors loses word order and contextual information.
+
+3. N-gram Language Modelling
+Backoff perplexity improved from unigram 548.5972 to bigram 216.9287 and trigram 196.7952. The trigram backoff model provided the lowest perplexity.
+
+4. Sequence Labelling
+The HMM + Viterbi POS tagger achieved accuracy 0.8590.
+The CRF achieved strict entity-level F1 0.7871 for NER.
+
+5. Topic Modelling
+BERTopic obtained the highest coherence score (0.1502). BERTopic also produced more human-interpretable semantic clusters than LSA or LDA.
+
+6. Retrieval-Augmented Generation
+The in-domain query was successfully answered using hybrid sparse and dense retrieval.
+For the out-of-knowledge query, retrieval confidence was low, so generation was blocked and the system returned 'I do not have enough information.' This reduced the risk of hallucination.
+
+7. Accuracy vs Compute vs Interpretability
+Naive Bayes was simple and highly interpretable but weaker on minority classes.
+Logistic Regression and Linear SVM provided strong performance with low computational cost and were much faster than Transformer training.
+DistilBERT achieved the best overall classification performance but required substantially more compute and training time.
+Therefore, Linear SVM offers an excellent accuracy-efficiency trade-off, while DistilBERT is preferred when maximum classification performance and contextual understanding are more important.

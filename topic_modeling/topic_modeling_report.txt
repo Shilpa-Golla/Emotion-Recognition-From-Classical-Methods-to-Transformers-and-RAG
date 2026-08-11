@@ -1,0 +1,155 @@
+IMPROVED TOPIC MODELLING REPORT
+============================================================
+Documents used: 5000
+Requested LSA/LDA topics: 6
+Custom stop words: 25
+N-grams: unigram + bigram
+
+============================================================
+IMPROVED LSA TOPICS
+============================================================
+
+Topic 0:
+don, love, life, make, good, right, pretty, going, need, day
+
+Topic 1:
+don, love, scared, actually, life, content, unwelcome, fucked, longing, numb
+
+Topic 2:
+pretty, right, don, comfortable, did, punished, pathetic, shitty, homesick, impressed
+
+Topic 3:
+love, pretty, make, sure, brave, happy, http, actually, need, href
+
+Topic 4:
+today, good, love, http, href, href http, did, kind, excited, days
+
+Topic 5:
+right, love, life, happy, http, href, href http, today, excited, agitated
+
+============================================================
+IMPROVED LDA TOPICS
+============================================================
+
+Topic 0:
+days, need, good, love, having, blessed, right, help, life, helpless
+
+Topic 1:
+today, sure, going, work, started, got, http, day, make, href
+
+Topic 2:
+say, right, make, life, home, pretty, feelings, need, actually, try
+
+Topic 3:
+write, life, going, quite, maybe, look, feelings, amazing, don, blog
+
+Topic 4:
+day, makes, strange, cold, life, home, world, depressed, doing, make
+
+Topic 5:
+did, don, pretty, make, sleep, place, caring, pain, life, family
+
+============================================================
+IMPROVED BERTOPIC TOPICS
+============================================================
+
+Topic 0:
+cold, agitated, lethargic, sleep, energetic, exhausted, night, eat, morning, groggy
+
+Topic 1:
+love, romantic, feelings, hes, relationship, thought, liked, hated, loving, guy
+
+Topic 2:
+hair, wear, cute, wearing, glamorous, gorgeous, skin, red, ugly, lovely
+
+Topic 3:
+shes, woman, amused, girl, seen, face, looking, likes, kind, hand
+
+Topic 4:
+nervous, scared, anxious, terrified, frightened, fearful, paranoid, afraid, anxiety, fear
+
+Topic 5:
+mom, mother, child, children, father, son, parent, kids, baby, passed
+
+Topic 6:
+humiliated, awkward, rejected, intimidated, shy, rude, embarrassed, groups, hostile, cause
+
+Topic 7:
+angry, offended, insulted, pissed, annoyed, mad, angered, spiteful, outraged, upset
+
+Topic 8:
+divine, god, church, faith, prayed, pray, lord, peace, jesus, heart
+
+Topic 9:
+lonely, hopeless, helpless, lost, isolated, doomed, times, powerless, life, cope
+
+Topic 10:
+aching, tender, awful, shitty, numb, pain, ache, crappy, horrible, dull
+
+Topic 11:
+film, character, characters, missed, episode, disappointed, tv, movies, feelings, movie
+
+Topic 12:
+blog, blogging, blogs, post, writing, lame, shouldnt, neglectful, purpose, sort
+
+Topic 13:
+excited, hopeful, optimistic, future, went, impressed, confident, week, pretty impressed, catching
+
+Topic 14:
+violent, innocent, guilty, child, abused, violence, beaten, victimized, assaulted, remorseful
+
+Topic 15:
+artistic, creative, art, canvas, artists, make, passionate, love, clever, inspired
+
+Topic 16:
+students, teach, learn, year, results, exam, semester, teaching, classes, school
+
+Topic 17:
+thankful, blessed, grateful, gratitude, family, loved, thank, support, say, day
+
+Topic 18:
+book, books, reading, read, story, did, boring, smart, fiction, stars
+
+Topic 19:
+listen, music, song, listening, songs, lyrics, pop, record, radio, scene
+
+Topic 20:
+write, writing, writer, written, words, writers, understand, advice, sense, stopped
+
+Topic 21:
+overwhelmed, rushed, plan, prize, talked, list, deprived, tomorrow, grateful, ready
+
+Topic 22:
+dissatisfied, life, productive, making, projects, progress, spend, work, change, computer
+
+Topic 23:
+intelligent, smart, clever, dumb, everytime, born, teacher, stupid, hate, read
+
+Topic 24:
+horny, slutty, naughty, sexual, continued, sex, desire, acceptable, fall, needs
+
+Topic 25:
+festive, christmas, tree, holiday, early, gift, holidays, traditional, gifts, year
+
+Topic 26:
+positive, joyful, happy, joy, peaceful, finding, deep, quite, life, clearer
+
+Topic 27:
+weird, strange, confused, funny, suspicious, instance, digging, resort, lj, encountered
+
+Topic 28:
+uncertain, decision, hesitant, reluctant, safe, certain, assured, truths, instincts, hey
+
+============================================================
+COHERENCE COMPARISON
+============================================================
+LSA: 0.0871
+LDA: 0.0538
+BERTopic: 0.1502
+
+Numerical winner: BERTopic
+Best coherence score: 0.1502
+
+QUALITATIVE INTERPRETATION
+The final model should be selected using both numerical coherence and human interpretability.
+BERTopic is expected to produce more semantically focused topics because it uses contextual sentence embeddings.

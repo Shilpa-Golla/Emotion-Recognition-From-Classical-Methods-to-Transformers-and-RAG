@@ -1,0 +1,65 @@
+TRANSFORMER / DISTILBERT REPORT
+======================================================================
+
+Model: distilbert-base-uncased
+Fast mode: False
+Train examples: 16000
+Validation examples: 2000
+Test examples: 2000
+Epochs: 2
+
+FINAL TEST METRICS
+----------------------------------------
+accuracy: 0.9200
+macro_precision: 0.8622
+macro_recall: 0.9253
+macro_f1: 0.8862
+weighted_f1: 0.9224
+
+CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+     sadness     0.9685    0.9518    0.9601       581
+         joy     0.9797    0.9036    0.9401       695
+        love     0.7346    0.9748    0.8378       159
+       anger     0.9278    0.8873    0.9071       275
+        fear     0.8995    0.8795    0.8894       224
+    surprise     0.6632    0.9545    0.7826        66
+
+    accuracy                         0.9200      2000
+   macro avg     0.8622    0.9253    0.8862      2000
+weighted avg     0.9304    0.9200    0.9224      2000
+
+
+CLASSICAL BASELINE COMPARISON
+Best baseline: Linear SVM
+Baseline Accuracy: 0.9045
+Baseline Macro-F1: 0.8589
+DistilBERT Accuracy: 0.9200
+DistilBERT Macro-F1: 0.8862
+
+
+TRANSFORMER ATTENTION SUMMARY
+
+Scaled Dot-Product Attention:
+
+Attention(Q, K, V)
+    = softmax(QK^T / sqrt(d_k)) V
+
+Q = Query
+K = Key
+V = Value
+
+Why divide by sqrt(d_k)?
+It prevents very large dot-product values from
+making softmax extremely peaked.
+
+Multi-Head Attention:
+Several attention heads learn different relationships
+between words in parallel.
+
+Unlike older sequential RNN/LSTM processing,
+Transformer self-attention can directly model
+relationships between tokens across the sequence.
+
+Total stage time: 5261.52 seconds

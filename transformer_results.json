@@ -1,0 +1,35 @@
+{
+    "model": "distilbert-base-uncased",
+    "fast_mode": false,
+    "train_examples": 16000,
+    "validation_examples": 2000,
+    "test_examples": 2000,
+    "epochs": 2,
+    "best_validation_macro_f1": 0.9059778238790978,
+    "test_metrics": {
+        "accuracy": 0.92,
+        "macro_precision": 0.8622084383597128,
+        "macro_recall": 0.9252549310076477,
+        "macro_f1": 0.8861815757711464,
+        "weighted_f1": 0.9223589131822703
+    },
+    "training_history": [
+        {
+            "epoch": 1,
+            "train_loss": 0.5799006706578657,
+            "train_macro_f1": 0.7678442618233062,
+            "validation_loss": 0.24462379083037378,
+            "validation_accuracy": 0.9275,
+            "validation_macro_f1": 0.9059778238790978
+        },
+        {
+            "epoch": 2,
+            "train_loss": 0.1893152096476406,
+            "train_macro_f1": 0.9081933111948076,
+            "validation_loss": 0.2082229099208489,
+            "validation_accuracy": 0.927,
+            "validation_macro_f1": 0.9009021449233572
+        }
+    ],
+    "total_time_seconds": 5261.522189378738
+}

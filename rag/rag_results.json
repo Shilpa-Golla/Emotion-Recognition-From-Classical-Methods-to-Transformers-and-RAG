@@ -1,0 +1,83 @@
+{
+    "configuration": {
+        "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+        "generator_model": "google/flan-t5-small",
+        "top_k": 3,
+        "sparse_weight": 0.5,
+        "dense_weight": 0.5,
+        "minimum_sparse_score": 0.05,
+        "minimum_dense_score": 0.35
+    },
+    "good_query": {
+        "query_name": "GOOD RAG QUERY",
+        "query": "What is Retrieval-Augmented Generation and how does it work?",
+        "retrieval_confident": true,
+        "decision": "generated_from_retrieved_context",
+        "answer": "combines information retrieval with text generation",
+        "retrieved_documents": [
+            {
+                "id": "doc_9",
+                "title": "RAG",
+                "text": "Retrieval-Augmented Generation combines information retrieval with text generation. Relevant documents are retrieved first and then supplied as context to a generator.",
+                "sparse_score": 0.7001720819879169,
+                "dense_score": 0.7513985633850098,
+                "hybrid_score": 1.0
+            },
+            {
+                "id": "doc_8",
+                "title": "BM25",
+                "text": "BM25 is a ranking function used by search engines to estimate how relevant documents are to a search query.",
+                "sparse_score": 0.0,
+                "dense_score": 0.3516394793987274,
+                "hybrid_score": 0.2585993463206801
+            },
+            {
+                "id": "doc_7",
+                "title": "TF-IDF",
+                "text": "TF-IDF measures the importance of a term to a document relative to a collection of documents.",
+                "sparse_score": 0.0,
+                "dense_score": 0.27559196949005127,
+                "hybrid_score": 0.21267689117699926
+            }
+        ],
+        "top_sparse_score": 0.7001720819879169,
+        "top_dense_score": 0.7513985633850098,
+        "top_hybrid_score": 1.0
+    },
+    "out_of_knowledge_query": {
+        "query_name": "OUT-OF-KNOWLEDGE RAG QUERY",
+        "query": "Who won the FIFA World Cup in 2022?",
+        "retrieval_confident": false,
+        "decision": "abstained_due_to_low_retrieval_confidence",
+        "answer": "I do not have enough information.",
+        "retrieved_documents": [
+            {
+                "id": "doc_9",
+                "title": "RAG",
+                "text": "Retrieval-Augmented Generation combines information retrieval with text generation. Relevant documents are retrieved first and then supplied as context to a generator.",
+                "sparse_score": 0.0,
+                "dense_score": 0.13065677881240845,
+                "hybrid_score": 0.5
+            },
+            {
+                "id": "doc_3",
+                "title": "Germany",
+                "text": "Germany is a country in Central Europe. Its capital is Berlin and its official language is German.",
+                "sparse_score": 0.0,
+                "dense_score": 0.12675504386425018,
+                "hybrid_score": 0.4829389256398937
+            },
+            {
+                "id": "doc_1",
+                "title": "Berlin",
+                "text": "Berlin is the capital of Germany. It is Germany's largest city by population and is located in northeastern Germany.",
+                "sparse_score": 0.0,
+                "dense_score": 0.10044662654399872,
+                "hybrid_score": 0.36790039274073083
+            }
+        ],
+        "top_sparse_score": 0.0,
+        "top_dense_score": 0.13065677881240845,
+        "top_hybrid_score": 0.5
+    }
+}
