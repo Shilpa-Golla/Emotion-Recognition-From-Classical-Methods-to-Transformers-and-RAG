@@ -666,7 +666,3 @@ where supported.
 - Some pretrained model files are large and may be better excluded from GitHub using `.gitignore`.
 
 ---
-
-# Author
-
-Shilpa Golla
