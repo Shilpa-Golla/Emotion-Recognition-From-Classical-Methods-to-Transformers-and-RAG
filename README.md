@@ -6,7 +6,7 @@ The project progresses from fundamental NLP techniques and classical machine lea
 
 ## Project Overview
 
-The central task is **emotion classification** across six classes: sadness, joy, love, anger, fear, and surprise.
+The central task is **emotion classification** across six classes: sadness, joy, love, anger, fear and surprise.
 
 ### Best Result
 
